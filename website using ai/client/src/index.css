@@ -1,0 +1,33 @@
+/* Global tweaks */
+body { background:#f8fafc; }
+
+/* Small helpers to keep things tidy */
+.shadow-card { box-shadow: 0 6px 24px rgba(0,0,0,.08); }
+
+/* colorful overall bg */
+.app-bg {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f0f7ff 0%, #f8f5ff 50%, #fff8f0 100%);
+}
+
+/* gradient navbar */
+.gradient-navbar {
+  background: linear-gradient(90deg, #6a5acd, #0ea5e9);
+}
+
+/* colorful cards subtle */
+.colorful-card {
+  border: 1px solid rgba(0,0,0,.05);
+}
+
+/* gradient heading text */
+.text-gradient {
+  background: linear-gradient(90deg, #2563eb, #dc2626);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* keep your old helper */
+.shadow-card { box-shadow: 0 6px 24px rgba(0,0,0,.08); }
+
