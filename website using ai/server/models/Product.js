@@ -64,14 +64,14 @@ const ProductSchema = new mongoose.Schema(
 );
 
 // Auto-generate slug from title if not provided or if title changed
-ProductSchema.pre("validate", function (next) {
+ProductSchema.pre("validate", function () {
   if ((!this.slug || this.isModified("title")) && this.title) {
     this.slug = this.title
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/(^-|-$)/g, "");
   }
-  next();
+  
 });
 
 // Text index for search

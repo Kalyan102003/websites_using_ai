@@ -44,14 +44,14 @@ const CartSchema = new mongoose.Schema(
 );
 
 // Ensure each product appears only once in the cart
-CartSchema.pre("save", function (next) {
+CartSchema.pre("save", function () {
   const seen = new Set();
   this.items = this.items.filter((item) => {
     if (seen.has(String(item.productId))) return false;
     seen.add(String(item.productId));
     return true;
   });
-  next();
+ 
 });
 
 export default mongoose.model("Cart", CartSchema);

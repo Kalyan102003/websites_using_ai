@@ -31,6 +31,6 @@ CategorySchema.pre("save", function (next) {
 });
 
 // Add index for faster access
-CategorySchema.index({ slug: 1 });
+
 
 export default mongoose.model("Category", CategorySchema);
